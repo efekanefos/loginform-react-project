@@ -97,7 +97,7 @@ class App extends Component {
     const { name, surname, email, blog } = this.state;
     return (
       <div>
-                <Container fluid className="pt-4 bg-secondary">
+        <Container fluid className="pt-4 bg-secondary">
           <h1 className="display-4 my-3 text-center"> Login Form </h1>{" "}
           <AddItem
             name={name}
