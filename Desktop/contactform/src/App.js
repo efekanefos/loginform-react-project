@@ -12,10 +12,7 @@ class App extends Component {
     items: []
   };
 
-  /**
-   * Handle input changes in the AddItem component.
-   * @param event
-   */
+  
   handleInputChange = event => {
     const target = event.target;
     const value = target.value;
@@ -25,10 +22,7 @@ class App extends Component {
     });
   };
 
-  /**
-   * Add an item to state.
-   * @param event
-   */
+  
   addItem = event => {
     event.preventDefault();
     const { name, surname, email, blog } = this.state; /* price */
@@ -56,11 +50,7 @@ class App extends Component {
     });
   };
 
-  /**
-   * Toggle the isEditing property of an item when the Edit button
-   * within ItemCard is clicked.
-   * @param index
-   */
+  
   toggleItemEditing = index => {
     this.setState({
       items: this.state.items.map((item, itemIndex) => {
@@ -75,11 +65,7 @@ class App extends Component {
     });
   };
 
-  /**
-   * Update the Name and/or Price of an item.
-   * @param event
-   * @param index
-   */
+  
   handleItemUpdate = (event, index) => {
     const target = event.target;
     const value = target.value;
@@ -97,10 +83,7 @@ class App extends Component {
     });
   };
 
-  /**
-   * Delete an item from state
-   * @param index Index of the item to be deleted.
-   */
+  
   onDelete = index => {
     this.setState({
       items: [
