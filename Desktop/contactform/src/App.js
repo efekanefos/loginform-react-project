@@ -97,8 +97,8 @@ class App extends Component {
     const { name, surname, email, blog } = this.state;
     return (
       <div>
-        <Container className="pt-4 bg-secondary">
-          <h1 className="display-4 my-4 text-center"> Login Form </h1>{" "}
+                <Container className="pt-4 bg-secondary">
+          <h1 className="display-4 my-3 text-center"> Login Form </h1>{" "}
           <AddItem
             name={name}
             surname={surname}
@@ -110,8 +110,8 @@ class App extends Component {
         </Container>{" "}
         <Container>
           <div>
-            <h1 className="display-4 my-0 text-center"> User Profiles </h1>
-
+            <h1 className="display-4 my-2 text-center"> User Profiles </h1>
+            <hr />
             <Row>
               {" "}
               {this.state.items.map((item, index) => (
@@ -125,8 +125,6 @@ class App extends Component {
                 />
               ))}{" "}
             </Row>
-
-            <hr />
           </div>{" "}
         </Container>{" "}
       </div>
