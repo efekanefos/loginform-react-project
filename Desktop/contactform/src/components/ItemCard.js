@@ -69,7 +69,7 @@ export const ItemCard = ({
                 <ListGroup.Item className="text-center">
                   <Form.Control
                     as="textarea"
-                    rows={3}
+                    rows={1}
                     name="blog"
                     placeholder="Blog"
                     value={item.blog}
@@ -84,13 +84,13 @@ export const ItemCard = ({
 
                 <Row className="justify-content-center mb-2">
                   <Card.Text
-                    className="px-4 text-center"
+                    className="cardwidth px-4 text-center"
                     style={{ width: 250 }}
                   >
                     <span>{item.surname}</span>
                   </Card.Text>
                 </Row>
-                <Row className="justify-content-center mb-4">
+                <Row className="cardwidth justify-content-center mb-4">
                   <Card.Text
                     className="px-4 text-center"
                     style={{ width: 250 }}
@@ -146,5 +146,4 @@ ItemCard.propTypes = {
   onChange: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired
 };
-
 
