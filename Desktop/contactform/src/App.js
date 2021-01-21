@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ItemCard } from "./components/ItemCard";
 import { AddItem } from "./components/AddItem";
 import { Container, Row } from "react-bootstrap";
+import "./components/Main.css";
 
 class App extends Component {
   state = {
@@ -12,20 +13,17 @@ class App extends Component {
     items: []
   };
 
-  
   handleInputChange = event => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const value = event.target.value;
+    const name = event.target.name;
     this.setState({
       [name]: value
     });
   };
 
-  
   addItem = event => {
     event.preventDefault();
-    const { name, surname, email, blog } = this.state; /* price */
+    const { name, surname, email, blog } = this.state;
     const itemsInState = this.state.items;
     const itemsArrayLength = itemsInState.length;
     const id = itemsArrayLength ? itemsInState[itemsArrayLength - 1].id + 1 : 1;
@@ -50,7 +48,6 @@ class App extends Component {
     });
   };
 
-  
   toggleItemEditing = index => {
     this.setState({
       items: this.state.items.map((item, itemIndex) => {
@@ -65,11 +62,9 @@ class App extends Component {
     });
   };
 
-  
   handleItemUpdate = (event, index) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const value = event.target.value;
+    const name = event.target.name;
     this.setState({
       items: this.state.items.map((item, itemIndex) => {
         if (itemIndex === index) {
@@ -83,7 +78,6 @@ class App extends Component {
     });
   };
 
-  
   onDelete = index => {
     this.setState({
       items: [
@@ -108,24 +102,23 @@ class App extends Component {
             onSubmit={this.addItem}
           />{" "}
         </Container>{" "}
-        <Container>
-          <div>
-            <h1 className="display-4 my-2 text-center"> User Profiles </h1>
-            <hr />
-            <Row>
-              {" "}
-              {this.state.items.map((item, index) => (
-                <ItemCard
-                  key={item.id}
-                  index={index}
-                  item={item}
-                  toggleEditing={() => this.toggleItemEditing(index)}
-                  onChange={this.handleItemUpdate}
-                  onDelete={() => this.onDelete(index)}
-                />
-              ))}{" "}
-            </Row>
-          </div>{" "}
+        <Container fluid className="px-0">
+          <h1 className="bg-dark text-white display-5 text-center py-2">
+            User Profiles
+          </h1>
+          <Row>
+            {" "}
+            {this.state.items.map((item, index) => (
+              <ItemCard
+                key={item.id}
+                index={index}
+                item={item}
+                toggleEditing={() => this.toggleItemEditing(index)}
+                onChange={this.handleItemUpdate}
+                onDelete={() => this.onDelete(index)}
+              />
+            ))}{" "}
+          </Row>{" "}
         </Container>{" "}
       </div>
     );
@@ -133,3 +126,4 @@ class App extends Component {
 }
 
 export default App;
+
