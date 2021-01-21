@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imbue&display=swap');
+
+.font1 {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.font2 {
+    font-family: 'Imbue', serif;
+}
