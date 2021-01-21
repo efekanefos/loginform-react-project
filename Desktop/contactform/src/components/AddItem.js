@@ -1,20 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Row, Form, Button, InputGroup } from "react-bootstrap";
+import "./AddItem.css";
 
 export const AddItem = ({ name, surname, email, blog, onChange, onSubmit }) => (
   <Row className="justify-content-center">
     <Form inline onSubmit={onSubmit}>
       <Form.Control
         type="text"
-        className="mb-2 mr-sm-2"
+        className="font1 mb-2 mr-sm-2"
         placeholder="Enter Your Name"
         value={name}
         name="name"
         onChange={onChange}
       />
 
-      <InputGroup className="mb-2 mr-sm-2">
+      <InputGroup className="font1 mb-2 mr-sm-2">
         <Form.Control
           type="text"
           placeholder="Enter Your Surname"
@@ -23,7 +24,7 @@ export const AddItem = ({ name, surname, email, blog, onChange, onSubmit }) => (
           onChange={onChange}
         />
       </InputGroup>
-      <InputGroup className="mb-2 mr-sm-2">
+      <InputGroup className="font1 mb-2 mr-sm-2">
         <Form.Control
           type="email"
           placeholder="Enter Your Email"
@@ -32,7 +33,7 @@ export const AddItem = ({ name, surname, email, blog, onChange, onSubmit }) => (
           onChange={onChange}
         />
       </InputGroup>
-      <InputGroup className="mb-2 mr-sm-2">
+      <InputGroup className="font2 mb-2 mr-sm-2">
         <Form.Control
           as="textarea"
           row={3}
