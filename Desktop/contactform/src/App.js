@@ -79,12 +79,8 @@ class App extends Component {
   };
 
   onDelete = index => {
-    this.setState({
-      items: [
-        ...this.state.items.slice(0, index),
-        ...this.state.items.slice(index + 1)
-      ]
-    });
+    this.state.items.splice(index, 1);
+    this.setState([...this.state.items]);
   };
 
   render() {
